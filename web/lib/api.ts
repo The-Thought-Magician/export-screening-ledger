@@ -9,7 +9,17 @@ async function http(path: string, init?: RequestInit) {
   const text = await res.text()
   const data = text ? JSON.parse(text) : null
   if (!res.ok) {
-    const msg = (data && (data.error || data.message)) || `Request failed (${res.status})`
+    const err = data && (data.error || data.message)
+    let msg: string
+    if (typeof err === 'string') {
+      msg = err
+    } else if (err && Array.isArray(err.issues)) {
+      msg = err.issues.map((i: { path?: string[]; message?: string }) => `${(i.path ?? []).join('.')}: ${i.message}`).join('; ')
+    } else if (err) {
+      msg = JSON.stringify(err)
+    } else {
+      msg = `Request failed (${res.status})`
+    }
     throw new Error(msg)
   }
   return data

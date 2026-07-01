@@ -117,7 +117,7 @@ export default function MatchDetailPage() {
     setSubmitting(true)
     setActionError(null)
     try {
-      await api.adjudicateMatch(id, { decision, decision_reason: reason.trim() })
+      await api.adjudicateMatch(id, { decision, reason: reason.trim() })
       await load()
     } catch (e) {
       setActionError(e instanceof Error ? e.message : 'Failed to record decision')
