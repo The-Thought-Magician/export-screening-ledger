@@ -24,7 +24,7 @@ interface Metrics {
   open_matches?: number
   overdue_rescreens?: number
   blocked_orders?: number
-  throughput?: number
+  throughput?: number | { screenings_7d?: number; screenings_30d?: number }
   screenings_total?: number
   matches_total?: number
   [k: string]: unknown
@@ -266,7 +266,11 @@ export default function DashboardOverview() {
             />
             <Stat
               label="Throughput"
-              value={num(metrics?.throughput ?? metrics?.screenings_total)}
+              value={num(
+                typeof metrics?.throughput === 'number'
+                  ? metrics.throughput
+                  : (metrics?.throughput?.screenings_7d ?? metrics?.screenings_total),
+              )}
               hint="Screenings run"
             />
           </div>
