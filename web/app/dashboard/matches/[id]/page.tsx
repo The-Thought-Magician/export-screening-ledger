@@ -179,7 +179,7 @@ export default function MatchDetailPage() {
     <div className="space-y-6">
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-zinc-600">
-          <Link href="/dashboard/matches" className="hover:text-amber-400">
+          <Link href="/dashboard/matches" className="hover:text-lime-400">
             Matches
           </Link>
           <span>/</span>
@@ -194,7 +194,7 @@ export default function MatchDetailPage() {
         </div>
         <p className="text-sm text-zinc-500">
           {match.list_name ? `Hit against ${match.list_name}. ` : ''}Composite score{' '}
-          <span className="font-semibold text-amber-400">{pct(match.score)}</span>.
+          <span className="font-semibold text-lime-400">{pct(match.score)}</span>.
         </p>
       </div>
 
@@ -211,7 +211,7 @@ export default function MatchDetailPage() {
           <Card>
             <CardHeader className="flex items-center justify-between">
               <h2 className="text-sm font-semibold text-zinc-200">Score breakdown</h2>
-              <span className="text-2xl font-semibold tabular-nums text-amber-400">{pct(match.score)}</span>
+              <span className="text-2xl font-semibold tabular-nums text-lime-400">{pct(match.score)}</span>
             </CardHeader>
             <CardBody>
               {breakdown.length === 0 ? (
@@ -228,7 +228,7 @@ export default function MatchDetailPage() {
                         </div>
                         <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-zinc-800">
                           <div
-                            className="h-full rounded-full bg-gradient-to-r from-amber-600 to-amber-400"
+                            className="h-full rounded-full bg-gradient-to-r from-lime-600 to-lime-400"
                             style={{ width: `${Math.round(w * 100)}%` }}
                           />
                         </div>
@@ -293,7 +293,7 @@ export default function MatchDetailPage() {
                     key={d.value}
                     className={`flex cursor-pointer items-center gap-3 rounded-lg border px-3 py-2 transition-colors ${
                       decision === d.value
-                        ? 'border-amber-500/60 bg-amber-500/5'
+                        ? 'border-lime-500/60 bg-lime-500/5'
                         : 'border-zinc-800 hover:border-zinc-700'
                     }`}
                   >
@@ -303,7 +303,7 @@ export default function MatchDetailPage() {
                       value={d.value}
                       checked={decision === d.value}
                       onChange={() => setDecision(d.value)}
-                      className="accent-amber-500"
+                      className="accent-lime-500"
                     />
                     <span className="text-sm text-zinc-200">{d.label}</span>
                   </label>
@@ -317,7 +317,7 @@ export default function MatchDetailPage() {
                   onChange={(e) => setReason(e.target.value)}
                   rows={3}
                   placeholder="Document the rationale for the audit ledger..."
-                  className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-amber-500/60 focus:outline-none"
+                  className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-lime-500/60 focus:outline-none"
                 />
               </div>
 
@@ -338,7 +338,7 @@ export default function MatchDetailPage() {
                   setAllowReason(reason || 'Confirmed false positive')
                   setAllowOpen(true)
                 }}
-                className="w-full text-center text-sm text-zinc-400 hover:text-amber-400"
+                className="w-full text-center text-sm text-zinc-400 hover:text-lime-400"
               >
                 Add to allowlist (suppress future hits)
               </button>
@@ -352,7 +352,7 @@ export default function MatchDetailPage() {
             <CardBody className="space-y-3 text-sm">
               <Meta label="Party">
                 {match.party_id ? (
-                  <Link href={`/dashboard/parties/${match.party_id}`} className="text-amber-400 hover:underline">
+                  <Link href={`/dashboard/parties/${match.party_id}`} className="text-lime-400 hover:underline">
                     {match.party_name ?? match.party_id}
                   </Link>
                 ) : (
@@ -363,7 +363,7 @@ export default function MatchDetailPage() {
                 {match.screening_id ? (
                   <Link
                     href={`/dashboard/screenings/${match.screening_id}`}
-                    className="text-amber-400 hover:underline"
+                    className="text-lime-400 hover:underline"
                   >
                     View run
                   </Link>
@@ -414,7 +414,7 @@ export default function MatchDetailPage() {
               value={allowReason}
               onChange={(e) => setAllowReason(e.target.value)}
               rows={3}
-              className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500/60 focus:outline-none"
+              className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500/60 focus:outline-none"
             />
           </div>
           <div>
@@ -425,7 +425,7 @@ export default function MatchDetailPage() {
               type="date"
               value={allowExpires}
               onChange={(e) => setAllowExpires(e.target.value)}
-              className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500/60 focus:outline-none"
+              className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500/60 focus:outline-none"
             />
           </div>
           {allowError && (

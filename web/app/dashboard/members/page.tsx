@@ -315,7 +315,7 @@ export default function MembersPage() {
               value={acceptToken}
               onChange={(e) => setAcceptToken(e.target.value)}
               placeholder="Paste invite token"
-              className="min-w-[16rem] flex-1 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="min-w-[16rem] flex-1 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             />
             <Button onClick={acceptInvite} disabled={accepting || !acceptToken.trim()}>
               {accepting ? <Spinner label="Accepting..." /> : 'Accept invite'}
@@ -332,7 +332,7 @@ export default function MembersPage() {
           onClick={() => setTab('members')}
           className={`-mb-px border-b-2 px-3 py-2 text-sm font-medium ${
             tab === 'members'
-              ? 'border-amber-500 text-amber-400'
+              ? 'border-lime-500 text-lime-400'
               : 'border-transparent text-zinc-500 hover:text-zinc-300'
           }`}
         >
@@ -342,7 +342,7 @@ export default function MembersPage() {
           onClick={() => setTab('invites')}
           className={`-mb-px border-b-2 px-3 py-2 text-sm font-medium ${
             tab === 'invites'
-              ? 'border-amber-500 text-amber-400'
+              ? 'border-lime-500 text-lime-400'
               : 'border-transparent text-zinc-500 hover:text-zinc-300'
           }`}
         >
@@ -353,7 +353,7 @@ export default function MembersPage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search..."
-            className="w-48 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+            className="w-48 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
           />
         </div>
       </div>
@@ -391,7 +391,7 @@ export default function MembersPage() {
                       <select
                         value={m.role}
                         onChange={(e) => void changeRole(m, e.target.value)}
-                        className="rounded-lg border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-200 focus:border-amber-500 focus:outline-none"
+                        className="rounded-lg border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-200 focus:border-lime-500 focus:outline-none"
                       >
                         {ROLES.map((r) => (
                           <option key={r} value={r}>
@@ -448,7 +448,7 @@ export default function MembersPage() {
                   <TD>
                     <button
                       onClick={() => void copyToken(inv.token)}
-                      className="font-mono text-xs text-amber-400 hover:text-amber-300"
+                      className="font-mono text-xs text-lime-400 hover:text-lime-300"
                       title="Copy token"
                     >
                       {inv.token ? `${inv.token.slice(0, 10)}…` : '—'}
@@ -495,7 +495,7 @@ export default function MembersPage() {
               value={memberForm.user_id}
               onChange={(e) => setMemberForm((f) => ({ ...f, user_id: e.target.value }))}
               placeholder="auth user id"
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             />
           </div>
           <div>
@@ -503,7 +503,7 @@ export default function MembersPage() {
             <select
               value={memberForm.role}
               onChange={(e) => setMemberForm((f) => ({ ...f, role: e.target.value as Role }))}
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             >
               {ROLES.map((r) => (
                 <option key={r} value={r}>
@@ -540,7 +540,7 @@ export default function MembersPage() {
               value={inviteForm.email}
               onChange={(e) => setInviteForm((f) => ({ ...f, email: e.target.value }))}
               placeholder="teammate@company.com"
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             />
           </div>
           <div>
@@ -548,7 +548,7 @@ export default function MembersPage() {
             <select
               value={inviteForm.role}
               onChange={(e) => setInviteForm((f) => ({ ...f, role: e.target.value as Role }))}
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             >
               {ROLES.map((r) => (
                 <option key={r} value={r}>

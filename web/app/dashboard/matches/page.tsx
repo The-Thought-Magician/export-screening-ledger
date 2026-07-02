@@ -163,7 +163,7 @@ export default function MatchesPage() {
             <button
               onClick={() => setTab('queue')}
               className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-                tab === 'queue' ? 'bg-amber-500 text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
+                tab === 'queue' ? 'bg-lime-500 text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
               }`}
             >
               Adjudication queue
@@ -172,7 +172,7 @@ export default function MatchesPage() {
             <button
               onClick={() => setTab('all')}
               className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-                tab === 'all' ? 'bg-amber-500 text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
+                tab === 'all' ? 'bg-lime-500 text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
               }`}
             >
               All matches
@@ -185,13 +185,13 @@ export default function MatchesPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search name or list..."
-              className="w-48 rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-amber-500/60 focus:outline-none"
+              className="w-48 rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-lime-500/60 focus:outline-none"
             />
             {tab === 'all' && (
               <select
                 value={decisionFilter}
                 onChange={(e) => setDecisionFilter(e.target.value)}
-                className="rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 focus:border-amber-500/60 focus:outline-none"
+                className="rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 focus:border-lime-500/60 focus:outline-none"
               >
                 <option value="">All decisions</option>
                 {DECISIONS.map((d) => (
@@ -247,11 +247,11 @@ export default function MatchesPage() {
                       <span className="inline-flex items-center justify-end gap-2">
                         <span className="hidden h-1.5 w-16 overflow-hidden rounded-full bg-zinc-800 sm:inline-block">
                           <span
-                            className="block h-full rounded-full bg-amber-500"
+                            className="block h-full rounded-full bg-lime-500"
                             style={{ width: `${Math.round((m.score ?? 0) * 100)}%` }}
                           />
                         </span>
-                        <span className="font-semibold tabular-nums text-amber-400">{scorePct(m.score)}</span>
+                        <span className="font-semibold tabular-nums text-lime-400">{scorePct(m.score)}</span>
                       </span>
                     </TD>
                     <TD>

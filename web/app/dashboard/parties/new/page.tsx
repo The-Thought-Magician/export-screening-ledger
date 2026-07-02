@@ -127,14 +127,14 @@ export default function NewParty() {
   }
 
   const inputCls =
-    'w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500/40'
+    'w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500 focus:outline-none focus:ring-1 focus:ring-lime-500/40'
   const labelCls = 'mb-1.5 block text-xs font-medium uppercase tracking-wide text-zinc-500'
 
   return (
     <div className="mx-auto max-w-2xl space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <Link href="/dashboard/parties" className="text-xs text-zinc-500 hover:text-amber-400">
+          <Link href="/dashboard/parties" className="text-xs text-zinc-500 hover:text-lime-400">
             ← Back to register
           </Link>
           <h1 className="mt-1 text-2xl font-semibold text-zinc-100">New party</h1>

@@ -236,7 +236,7 @@ export default function OrdersPage() {
             <button
               onClick={() => setStatusFilter('')}
               className={`rounded-lg px-3 py-1.5 text-sm transition-colors ${
-                statusFilter === '' ? 'bg-amber-500/10 text-amber-400' : 'text-zinc-400 hover:bg-zinc-800'
+                statusFilter === '' ? 'bg-lime-500/10 text-lime-400' : 'text-zinc-400 hover:bg-zinc-800'
               }`}
             >
               All
@@ -246,7 +246,7 @@ export default function OrdersPage() {
                 key={s}
                 onClick={() => setStatusFilter(s)}
                 className={`rounded-lg px-3 py-1.5 text-sm capitalize transition-colors ${
-                  statusFilter === s ? 'bg-amber-500/10 text-amber-400' : 'text-zinc-400 hover:bg-zinc-800'
+                  statusFilter === s ? 'bg-lime-500/10 text-lime-400' : 'text-zinc-400 hover:bg-zinc-800'
                 }`}
               >
                 {gateLabel(s)} {counts[s] ? <span className="text-zinc-600">({counts[s]})</span> : null}
@@ -257,7 +257,7 @@ export default function OrdersPage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search reference, country, end use..."
-            className="w-64 rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-amber-500 focus:outline-none"
+            className="w-64 rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-lime-500 focus:outline-none"
           />
         </CardHeader>
         <CardBody className="p-0">
@@ -291,7 +291,7 @@ export default function OrdersPage() {
                 {filtered.map((o) => (
                   <TR key={o.id}>
                     <TD>
-                      <Link href={`/dashboard/orders/${o.id}`} className="font-medium text-zinc-100 hover:text-amber-400">
+                      <Link href={`/dashboard/orders/${o.id}`} className="font-medium text-zinc-100 hover:text-lime-400">
                         {o.reference}
                       </Link>
                     </TD>
@@ -344,7 +344,7 @@ export default function OrdersPage() {
               value={form.reference}
               onChange={(e) => setForm((f) => ({ ...f, reference: e.target.value }))}
               placeholder="PO-2026-0042"
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-lime-500 focus:outline-none"
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -354,7 +354,7 @@ export default function OrdersPage() {
                 value={form.destination_country}
                 onChange={(e) => setForm((f) => ({ ...f, destination_country: e.target.value }))}
                 placeholder="Germany"
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-amber-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-lime-500 focus:outline-none"
               />
             </div>
             <div>
@@ -366,7 +366,7 @@ export default function OrdersPage() {
                 value={form.value}
                 onChange={(e) => setForm((f) => ({ ...f, value: e.target.value }))}
                 placeholder="25000"
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-amber-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-lime-500 focus:outline-none"
               />
             </div>
           </div>
@@ -376,7 +376,7 @@ export default function OrdersPage() {
               value={form.end_use}
               onChange={(e) => setForm((f) => ({ ...f, end_use: e.target.value }))}
               placeholder="Commercial telecom infrastructure"
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-lime-500 focus:outline-none"
             />
           </div>
 
@@ -400,7 +400,7 @@ export default function OrdersPage() {
                       onChange={(e) =>
                         setSelectedParties((rows) => rows.map((r, j) => (j === i ? { ...r, party_id: e.target.value } : r)))
                       }
-                      className="flex-1 rounded-lg border border-zinc-700 bg-zinc-950 px-2 py-1.5 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+                      className="flex-1 rounded-lg border border-zinc-700 bg-zinc-950 px-2 py-1.5 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
                     >
                       {parties.map((p) => (
                         <option key={p.id} value={p.id}>
@@ -413,7 +413,7 @@ export default function OrdersPage() {
                       onChange={(e) =>
                         setSelectedParties((rows) => rows.map((r, j) => (j === i ? { ...r, role_on_order: e.target.value } : r)))
                       }
-                      className="rounded-lg border border-zinc-700 bg-zinc-950 px-2 py-1.5 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+                      className="rounded-lg border border-zinc-700 bg-zinc-950 px-2 py-1.5 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
                     >
                       {ROLE_OPTIONS.map((r) => (
                         <option key={r} value={r}>{r.replace(/_/g, ' ')}</option>

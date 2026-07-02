@@ -148,7 +148,7 @@ export default function RunScreeningPage() {
     <div className="space-y-6">
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-zinc-600">
-          <Link href="/dashboard/screenings" className="hover:text-amber-400">
+          <Link href="/dashboard/screenings" className="hover:text-lime-400">
             Screenings
           </Link>
           <span>/</span>
@@ -181,12 +181,12 @@ export default function RunScreeningPage() {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Search parties..."
-                  className="w-44 rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-amber-500/60 focus:outline-none"
+                  className="w-44 rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-lime-500/60 focus:outline-none"
                 />
                 <select
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value)}
-                  className="rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 focus:border-amber-500/60 focus:outline-none"
+                  className="rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 focus:border-lime-500/60 focus:outline-none"
                 >
                   <option value="">All statuses</option>
                   {statuses.map((s) => (
@@ -226,18 +226,18 @@ export default function RunScreeningPage() {
                           type="button"
                           onClick={() => setSelectedPartyId(p.id)}
                           className={`flex w-full items-center justify-between gap-3 px-5 py-3 text-left transition-colors ${
-                            active ? 'bg-amber-500/10' : 'hover:bg-zinc-900/60'
+                            active ? 'bg-lime-500/10' : 'hover:bg-zinc-900/60'
                           }`}
                         >
                           <span className="flex items-center gap-3">
                             <span
                               className={`inline-block h-3 w-3 rounded-full border ${
-                                active ? 'border-amber-400 bg-amber-400' : 'border-zinc-600'
+                                active ? 'border-lime-400 bg-lime-400' : 'border-zinc-600'
                               }`}
                               aria-hidden
                             />
                             <span className="flex flex-col">
-                              <span className={`text-sm font-medium ${active ? 'text-amber-300' : 'text-zinc-200'}`}>
+                              <span className={`text-sm font-medium ${active ? 'text-lime-300' : 'text-zinc-200'}`}>
                                 {p.name}
                               </span>
                               <span className="text-xs text-zinc-500">
@@ -287,7 +287,7 @@ export default function RunScreeningPage() {
                 <select
                   value={trigger}
                   onChange={(e) => setTrigger(e.target.value)}
-                  className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500/60 focus:outline-none"
+                  className="mt-1 w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500/60 focus:outline-none"
                 >
                   <option value="manual">Manual</option>
                   <option value="onboarding">Onboarding</option>
@@ -329,7 +329,7 @@ export default function RunScreeningPage() {
                     <div
                       className={`mt-1 text-2xl font-semibold tabular-nums ${
                         (result.match_count ?? result.matches?.length ?? 0) > 0
-                          ? 'text-amber-400'
+                          ? 'text-lime-400'
                           : 'text-emerald-400'
                       }`}
                     >
@@ -354,7 +354,7 @@ export default function RunScreeningPage() {
                         <span className="min-w-0">
                           <Link
                             href={`/dashboard/matches/${m.id}`}
-                            className="block truncate text-sm font-medium text-zinc-200 hover:text-amber-400"
+                            className="block truncate text-sm font-medium text-zinc-200 hover:text-lime-400"
                           >
                             {m.matched_name ?? 'Match'}
                           </Link>
@@ -362,7 +362,7 @@ export default function RunScreeningPage() {
                             <span className="text-xs text-zinc-500">{m.decision}</span>
                           )}
                         </span>
-                        <span className="shrink-0 text-sm font-semibold tabular-nums text-amber-400">
+                        <span className="shrink-0 text-sm font-semibold tabular-nums text-lime-400">
                           {typeof m.score === 'number' ? `${Math.round(m.score * 100)}%` : '—'}
                         </span>
                       </li>

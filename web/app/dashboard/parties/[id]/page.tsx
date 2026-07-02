@@ -265,7 +265,7 @@ export default function PartyDetailPage() {
   if (error) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/parties" className="text-sm text-amber-400 hover:underline">
+        <Link href="/dashboard/parties" className="text-sm text-lime-400 hover:underline">
           ← Back to parties
         </Link>
         <EmptyState
@@ -284,7 +284,7 @@ export default function PartyDetailPage() {
   if (!party) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/parties" className="text-sm text-amber-400 hover:underline">
+        <Link href="/dashboard/parties" className="text-sm text-lime-400 hover:underline">
           ← Back to parties
         </Link>
         <EmptyState title="Party not found" description="This party may have been deleted." />
@@ -299,7 +299,7 @@ export default function PartyDetailPage() {
   return (
     <div className="space-y-6">
       <div>
-        <Link href="/dashboard/parties" className="text-sm text-amber-400 hover:underline">
+        <Link href="/dashboard/parties" className="text-sm text-lime-400 hover:underline">
           ← Back to parties
         </Link>
       </div>
@@ -332,7 +332,7 @@ export default function PartyDetailPage() {
       </div>
 
       {runMsg && (
-        <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-300">
+        <div className="rounded-lg border border-lime-500/30 bg-lime-500/10 px-4 py-3 text-sm text-lime-300">
           {runMsg}
         </div>
       )}
@@ -407,7 +407,7 @@ export default function PartyDetailPage() {
                 value={newAlias}
                 onChange={(e) => setNewAlias(e.target.value)}
                 placeholder="Add alias or alternate spelling..."
-                className="flex-1 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500 focus:outline-none"
+                className="flex-1 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500 focus:outline-none"
               />
               <Button type="submit" disabled={addingAlias || !newAlias.trim()}>
                 {addingAlias ? 'Adding...' : 'Add alias'}
@@ -439,7 +439,7 @@ export default function PartyDetailPage() {
       <Card>
         <CardHeader className="flex items-center justify-between">
           <h2 className="text-sm font-semibold text-zinc-200">Screening history</h2>
-          <Link href="/dashboard/screenings" className="text-xs text-amber-400 hover:underline">
+          <Link href="/dashboard/screenings" className="text-xs text-lime-400 hover:underline">
             All screenings →
           </Link>
         </CardHeader>
@@ -471,7 +471,7 @@ export default function PartyDetailPage() {
                     <TD>{fmtDate(s.created_at)}</TD>
                     <TD>{s.trigger ?? 'manual'}</TD>
                     <TD>
-                      <span className={(s.match_count ?? 0) > 0 ? 'font-medium text-amber-400' : 'text-zinc-400'}>
+                      <span className={(s.match_count ?? 0) > 0 ? 'font-medium text-lime-400' : 'text-zinc-400'}>
                         {s.match_count ?? 0}
                       </span>
                     </TD>
@@ -479,7 +479,7 @@ export default function PartyDetailPage() {
                       <Badge tone={statusTone(s.status ?? undefined)}>{s.status ?? 'done'}</Badge>
                     </TD>
                     <TD className="text-right">
-                      <Link href={`/dashboard/screenings/${s.id}`} className="text-xs text-amber-400 hover:underline">
+                      <Link href={`/dashboard/screenings/${s.id}`} className="text-xs text-lime-400 hover:underline">
                         View
                       </Link>
                     </TD>
@@ -595,7 +595,7 @@ export default function PartyDetailPage() {
         }
       >
         <form id="sched-form" onSubmit={submitSchedule} className="space-y-3">
-          {schedMsg && <p className="text-sm text-amber-300">{schedMsg}</p>}
+          {schedMsg && <p className="text-sm text-lime-300">{schedMsg}</p>}
           <Field label="Cadence">
             <select
               value={sched.cadence}
@@ -614,7 +614,7 @@ export default function PartyDetailPage() {
               type="checkbox"
               checked={sched.on_change}
               onChange={(e) => setSched({ ...sched, on_change: e.target.checked })}
-              className="accent-amber-500"
+              className="accent-lime-500"
             />
             Re-screen automatically when this party changes
           </label>
@@ -623,7 +623,7 @@ export default function PartyDetailPage() {
               type="checkbox"
               checked={sched.on_new_version}
               onChange={(e) => setSched({ ...sched, on_new_version: e.target.checked })}
-              className="accent-amber-500"
+              className="accent-lime-500"
             />
             Re-screen when a new list version is activated
           </label>
@@ -634,7 +634,7 @@ export default function PartyDetailPage() {
 }
 
 const inputCls =
-  'w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500 focus:outline-none'
+  'w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500 focus:outline-none'
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (

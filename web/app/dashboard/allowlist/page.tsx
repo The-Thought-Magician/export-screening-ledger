@@ -24,7 +24,7 @@ interface AllowlistEntry {
 }
 
 const inputCls =
-  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500/60 focus:outline-none focus:ring-1 focus:ring-amber-500/40'
+  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500/60 focus:outline-none focus:ring-1 focus:ring-lime-500/40'
 
 function fmtDate(s?: string | null) {
   if (!s) return '—'
@@ -164,7 +164,7 @@ export default function AllowlistPage() {
                 key={f}
                 onClick={() => setFilter(f)}
                 className={`rounded-md px-3 py-1 text-xs font-medium capitalize transition-colors ${
-                  filter === f ? 'bg-amber-500 text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
+                  filter === f ? 'bg-lime-500 text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
                 }`}
               >
                 {f}

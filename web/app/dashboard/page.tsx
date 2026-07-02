@@ -215,7 +215,7 @@ export default function DashboardOverview() {
             <select
               value={workspaceId}
               onChange={(e) => void switchWorkspace(e.target.value)}
-              className="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             >
               {workspaces.map((w) => (
                 <option key={w.id} value={w.id}>
@@ -279,7 +279,7 @@ export default function DashboardOverview() {
             <Card className="lg:col-span-1">
               <CardHeader className="flex items-center justify-between">
                 <h2 className="text-sm font-semibold text-zinc-200">Parties by status</h2>
-                <Link href="/dashboard/parties" className="text-xs text-amber-400 hover:text-amber-300">
+                <Link href="/dashboard/parties" className="text-xs text-lime-400 hover:text-lime-300">
                   View register
                 </Link>
               </CardHeader>
@@ -299,7 +299,7 @@ export default function DashboardOverview() {
                         </div>
                         <div className="h-1.5 w-full overflow-hidden rounded-full bg-zinc-800">
                           <div
-                            className="h-full rounded-full bg-amber-500/70"
+                            className="h-full rounded-full bg-lime-500/70"
                             style={{ width: `${pct}%` }}
                           />
                         </div>

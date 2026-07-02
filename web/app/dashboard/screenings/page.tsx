@@ -263,7 +263,7 @@ export default function ScreeningsPage() {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 focus:border-amber-500/60 focus:outline-none"
+              className="rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 focus:border-lime-500/60 focus:outline-none"
             >
               <option value="all">All statuses</option>
               {statuses.map((s) => (
@@ -277,7 +277,7 @@ export default function ScreeningsPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search runs..."
-              className="w-full max-w-xs rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 focus:border-amber-500/60 focus:outline-none"
+              className="w-full max-w-xs rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 focus:border-lime-500/60 focus:outline-none"
             />
           </div>
         </CardHeader>
@@ -320,7 +320,7 @@ export default function ScreeningsPage() {
                     <TD className="text-right">
                       <span
                         className={`tabular-nums font-medium ${
-                          (s.match_count ?? 0) > 0 ? 'text-amber-400' : 'text-zinc-400'
+                          (s.match_count ?? 0) > 0 ? 'text-lime-400' : 'text-zinc-400'
                         }`}
                       >
                         {s.match_count ?? 0}
@@ -333,7 +333,7 @@ export default function ScreeningsPage() {
                     <TD className="text-right">
                       <Link
                         href={`/dashboard/screenings/${s.id}`}
-                        className="text-xs text-amber-400 hover:text-amber-300"
+                        className="text-xs text-lime-400 hover:text-lime-300"
                       >
                         View →
                       </Link>
@@ -382,7 +382,7 @@ export default function ScreeningsPage() {
                 name="run-mode"
                 checked={runMode === 'all'}
                 onChange={() => setRunMode('all')}
-                className="mt-1 accent-amber-500"
+                className="mt-1 accent-lime-500"
               />
               <span>
                 <span className="block text-sm font-medium text-zinc-200">All parties</span>
@@ -398,7 +398,7 @@ export default function ScreeningsPage() {
                 checked={runMode === 'segment'}
                 onChange={() => setRunMode('segment')}
                 disabled={segments.length === 0}
-                className="mt-1 accent-amber-500"
+                className="mt-1 accent-lime-500"
               />
               <span>
                 <span className="block text-sm font-medium text-zinc-200">Saved segment</span>
@@ -416,7 +416,7 @@ export default function ScreeningsPage() {
               <select
                 value={segmentId}
                 onChange={(e) => setSegmentId(e.target.value)}
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500/60 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500/60 focus:outline-none"
               >
                 <option value="">Select a segment…</option>
                 {segments.map((seg) => (

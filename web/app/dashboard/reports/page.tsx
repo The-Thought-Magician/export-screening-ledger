@@ -54,7 +54,7 @@ const REPORT_TYPES = [
 ]
 
 const inputCls =
-  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500/60 focus:outline-none focus:ring-1 focus:ring-amber-500/40'
+  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500/60 focus:outline-none focus:ring-1 focus:ring-lime-500/40'
 const labelCls = 'mb-1 block text-xs font-medium uppercase tracking-wide text-zinc-500'
 
 function fmtDate(d?: string) {
@@ -209,7 +209,7 @@ export default function ReportsPage() {
             disabled={generating}
             className={`rounded-xl border px-4 py-4 text-left transition-colors disabled:opacity-60 ${
               activeType === r.value
-                ? 'border-amber-500/60 bg-amber-500/10'
+                ? 'border-lime-500/60 bg-lime-500/10'
                 : 'border-zinc-800 bg-zinc-900 hover:border-zinc-700'
             }`}
           >
@@ -442,7 +442,7 @@ function SnapshotView({ view }: { view: DerivedView | null }) {
               <div key={k} className="flex items-center gap-3">
                 <div className="w-40 shrink-0 truncate text-xs text-zinc-400">{k}</div>
                 <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-zinc-800">
-                  <div className="h-full rounded-full bg-amber-500" style={{ width: `${(n / maxBar) * 100}%` }} />
+                  <div className="h-full rounded-full bg-lime-500" style={{ width: `${(n / maxBar) * 100}%` }} />
                 </div>
                 <div className="w-12 shrink-0 text-right text-xs tabular-nums text-zinc-300">{v}</div>
               </div>

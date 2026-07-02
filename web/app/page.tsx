@@ -44,8 +44,8 @@ export default function Home() {
     <main className="min-h-screen bg-zinc-950 text-zinc-100">
       <nav className="border-b border-zinc-800 px-6 py-4 flex items-center justify-between">
         <span className="inline-flex items-center gap-2 text-lg font-bold">
-          <span className="inline-block h-6 w-6 rounded bg-amber-500" />
-          ExportScreening<span className="text-amber-400">Ledger</span>
+          <span className="inline-block h-6 w-6 rounded bg-lime-500" />
+          ExportScreening<span className="text-lime-400">Ledger</span>
         </span>
         <div className="flex items-center gap-4">
           <Link href="/pricing" className="text-sm text-zinc-300 hover:text-zinc-100">
@@ -56,7 +56,7 @@ export default function Home() {
           </Link>
           <Link
             href="/auth/sign-up"
-            className="rounded-lg bg-amber-500 px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-amber-400"
+            className="rounded-lg bg-lime-500 px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-lime-400"
           >
             Get Started
           </Link>
@@ -65,22 +65,23 @@ export default function Home() {
 
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-6 py-24 text-center">
-        <span className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-400">
-          Deterministic. Explainable. Defensible.
+        <span className="inline-flex items-center gap-2 rounded-full border border-lime-500/30 bg-lime-500/10 px-3 py-1 text-xs font-medium text-lime-400">
+          Deterministic match determination. Auditable by design.
         </span>
         <h1 className="mt-6 text-4xl font-black tracking-tight sm:text-5xl">
-          Continuous restricted-party screening with an{' '}
-          <span className="text-amber-400">immutable decision-of-record</span>.
+          Denied-party screening with an{' '}
+          <span className="text-lime-400">immutable decision-of-record</span>.
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-400">
-          ExportScreeningLedger screens every party against current OFAC, BIS, EU, and UN lists, forces each match
-          through a structured adjudication workflow, gates orders on unresolved parties, and writes every action to a
-          hash-chained ledger that survives an audit.
+          ExportScreeningLedger screens every counterparty against current OFAC SDN, BIS Entity List, EU, and UN
+          Consolidated lists, routes each candidate match through a structured adjudication workflow, gates
+          transactions on unresolved parties, and records every determination to a hash-chained ledger built to
+          withstand regulatory review.
         </p>
         <div className="mt-9 flex items-center justify-center gap-4">
           <Link
             href="/auth/sign-up"
-            className="rounded-lg bg-amber-500 px-6 py-3 text-sm font-semibold text-zinc-950 hover:bg-amber-400"
+            className="rounded-lg bg-lime-500 px-6 py-3 text-sm font-semibold text-zinc-950 hover:bg-lime-400"
           >
             Start screening free
           </Link>
@@ -111,7 +112,7 @@ export default function Home() {
               ['No immutability', 'An editable spreadsheet has no evidentiary value.'],
             ].map(([t, b]) => (
               <div key={t} className="rounded-xl border border-zinc-800 bg-zinc-950 p-5">
-                <h3 className="font-semibold text-amber-400">{t}</h3>
+                <h3 className="font-semibold text-lime-400">{t}</h3>
                 <p className="mt-2 text-sm text-zinc-400">{b}</p>
               </div>
             ))}
@@ -143,7 +144,7 @@ export default function Home() {
           <div className="mt-8 flex items-center justify-center gap-4">
             <Link
               href="/auth/sign-up"
-              className="rounded-lg bg-amber-500 px-6 py-3 text-sm font-semibold text-zinc-950 hover:bg-amber-400"
+              className="rounded-lg bg-lime-500 px-6 py-3 text-sm font-semibold text-zinc-950 hover:bg-lime-400"
             >
               Get Started
             </Link>

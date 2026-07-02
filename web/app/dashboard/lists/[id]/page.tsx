@@ -213,7 +213,7 @@ export default function ListDetailPage() {
   if (error) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/lists" className="text-sm text-amber-400 hover:underline">
+        <Link href="/dashboard/lists" className="text-sm text-lime-400 hover:underline">
           ← Back to lists
         </Link>
         <EmptyState
@@ -232,7 +232,7 @@ export default function ListDetailPage() {
   if (!list) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/lists" className="text-sm text-amber-400 hover:underline">
+        <Link href="/dashboard/lists" className="text-sm text-lime-400 hover:underline">
           ← Back to lists
         </Link>
         <EmptyState title="List not found" description="This list may have been deleted." />
@@ -243,7 +243,7 @@ export default function ListDetailPage() {
   return (
     <div className="space-y-6">
       <div>
-        <Link href="/dashboard/lists" className="text-sm text-amber-400 hover:underline">
+        <Link href="/dashboard/lists" className="text-sm text-lime-400 hover:underline">
           ← Back to lists
         </Link>
       </div>
@@ -310,7 +310,7 @@ export default function ListDetailPage() {
                       <TD>
                         <Link
                           href={`/dashboard/list-versions/${v.id}`}
-                          className="font-medium text-zinc-100 hover:text-amber-400"
+                          className="font-medium text-zinc-100 hover:text-lime-400"
                         >
                           {v.version_label}
                         </Link>
@@ -333,7 +333,7 @@ export default function ListDetailPage() {
                         <div className="flex justify-end gap-3">
                           <Link
                             href={`/dashboard/list-versions/${v.id}`}
-                            className="text-xs text-amber-400 hover:underline"
+                            className="text-xs text-lime-400 hover:underline"
                           >
                             Entries
                           </Link>
@@ -341,7 +341,7 @@ export default function ListDetailPage() {
                             <button
                               onClick={() => activate(v)}
                               disabled={activating === v.id}
-                              className="text-xs text-amber-400 hover:underline disabled:opacity-50"
+                              className="text-xs text-lime-400 hover:underline disabled:opacity-50"
                             >
                               {activating === v.id ? 'Activating...' : 'Activate'}
                             </button>
@@ -395,7 +395,7 @@ export default function ListDetailPage() {
               type="checkbox"
               checked={editForm.is_active}
               onChange={(e) => setEditForm({ ...editForm, is_active: e.target.checked })}
-              className="accent-amber-500"
+              className="accent-lime-500"
             />
             List is active (included in screenings)
           </label>
@@ -453,7 +453,7 @@ export default function ListDetailPage() {
 }
 
 const inputCls =
-  'w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500 focus:outline-none'
+  'w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500 focus:outline-none'
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (

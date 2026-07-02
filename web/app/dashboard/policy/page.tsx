@@ -246,7 +246,7 @@ export default function PolicyPage() {
             <div>
               <div className="mb-2 flex items-center justify-between">
                 <label className="text-sm font-medium text-zinc-300">Match threshold</label>
-                <span className="tabular-nums text-sm text-amber-400">{threshold.toFixed(2)}</span>
+                <span className="tabular-nums text-sm text-lime-400">{threshold.toFixed(2)}</span>
               </div>
               <input
                 type="range"
@@ -255,7 +255,7 @@ export default function PolicyPage() {
                 step={0.01}
                 value={threshold}
                 onChange={(e) => setThreshold(Number(e.target.value))}
-                className="w-full accent-amber-500"
+                className="w-full accent-lime-500"
               />
               <p className="mt-1 text-xs text-zinc-500">
                 Composite scores ≥ this value surface as candidate matches requiring review.
@@ -274,7 +274,7 @@ export default function PolicyPage() {
                 step={0.01}
                 value={autoClearFloor}
                 onChange={(e) => setAutoClearFloor(Number(e.target.value))}
-                className="w-full accent-amber-500"
+                className="w-full accent-lime-500"
               />
               <p className="mt-1 text-xs text-zinc-500">
                 Scores below this floor are discarded as noise and never enter the adjudication queue.
@@ -288,7 +288,7 @@ export default function PolicyPage() {
               <div className="mb-2 flex items-center justify-between">
                 <label className="text-sm font-medium text-zinc-300">Scoring weights</label>
                 <span
-                  className={`tabular-nums text-xs ${weightsBalanced ? 'text-emerald-400' : 'text-amber-400'}`}
+                  className={`tabular-nums text-xs ${weightsBalanced ? 'text-emerald-400' : 'text-lime-400'}`}
                 >
                   total {weightTotal.toFixed(2)}
                 </span>
@@ -315,10 +315,10 @@ export default function PolicyPage() {
                           onChange={(e) =>
                             setWeights((w) => ({ ...w, [key]: Number(e.target.value) }))
                           }
-                          className="w-full accent-amber-500"
+                          className="w-full accent-lime-500"
                         />
                         <div className="h-1.5 w-24 shrink-0 overflow-hidden rounded-full bg-zinc-800">
-                          <div className="h-full rounded-full bg-amber-500/70" style={{ width: `${share}%` }} />
+                          <div className="h-full rounded-full bg-lime-500/70" style={{ width: `${share}%` }} />
                         </div>
                       </div>
                     </div>
@@ -350,7 +350,7 @@ export default function PolicyPage() {
                   type="checkbox"
                   checked={fourEyes}
                   onChange={(e) => setFourEyes(e.target.checked)}
-                  className="mt-0.5 h-4 w-4 accent-amber-500"
+                  className="mt-0.5 h-4 w-4 accent-lime-500"
                 />
                 <span>
                   <span className="block text-sm font-medium text-zinc-200">Require four-eyes review</span>
@@ -365,7 +365,7 @@ export default function PolicyPage() {
                 <select
                   value={cadence}
                   onChange={(e) => setCadence(e.target.value)}
-                  className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+                  className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
                 >
                   {CADENCES.map((c) => (
                     <option key={c} value={c}>

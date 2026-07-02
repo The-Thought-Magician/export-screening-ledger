@@ -132,7 +132,7 @@ export default function ScreeningDetailPage() {
   if (error && !screening) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/screenings" className="text-sm text-amber-400 hover:text-amber-300">
+        <Link href="/dashboard/screenings" className="text-sm text-lime-400 hover:text-lime-300">
           ← Back to screenings
         </Link>
         <EmptyState
@@ -157,7 +157,7 @@ export default function ScreeningDetailPage() {
   return (
     <div className="space-y-6">
       <div className="flex flex-col gap-3">
-        <Link href="/dashboard/screenings" className="text-sm text-amber-400 hover:text-amber-300">
+        <Link href="/dashboard/screenings" className="text-sm text-lime-400 hover:text-lime-300">
           ← Back to screenings
         </Link>
         <div className="flex flex-wrap items-center justify-between gap-3">
@@ -167,7 +167,7 @@ export default function ScreeningDetailPage() {
                 {screening.party_id ? (
                   <Link
                     href={`/dashboard/parties/${screening.party_id}`}
-                    className="hover:text-amber-400"
+                    className="hover:text-lime-400"
                   >
                     {screening.party_name || 'Party screening'}
                   </Link>
@@ -206,7 +206,7 @@ export default function ScreeningDetailPage() {
               <select
                 value={decisionFilter}
                 onChange={(e) => setDecisionFilter(e.target.value)}
-                className="rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 focus:border-amber-500/60 focus:outline-none"
+                className="rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 focus:border-lime-500/60 focus:outline-none"
               >
                 <option value="all">All decisions</option>
                 {decisions.map((d) => (
@@ -265,7 +265,7 @@ export default function ScreeningDetailPage() {
                       <TD className="text-right">
                         <Link
                           href={`/dashboard/matches/${m.id}`}
-                          className="text-xs text-amber-400 hover:text-amber-300"
+                          className="text-xs text-lime-400 hover:text-lime-300"
                         >
                           Adjudicate →
                         </Link>
@@ -296,7 +296,7 @@ export default function ScreeningDetailPage() {
                       <Link
                         key={`${id}-${i}`}
                         href={`/dashboard/list-versions/${id}`}
-                        className="font-mono text-xs text-amber-400 hover:text-amber-300"
+                        className="font-mono text-xs text-lime-400 hover:text-lime-300"
                       >
                         {id.slice(0, 8)}
                       </Link>
@@ -349,7 +349,7 @@ function ScoreBars({ breakdown }: { breakdown?: ScoreBreakdown | null }) {
               {k}
             </span>
             <div className="h-1.5 flex-1 overflow-hidden rounded bg-zinc-800">
-              <div className="h-full rounded bg-amber-500" style={{ width: `${w}%` }} />
+              <div className="h-full rounded bg-lime-500" style={{ width: `${w}%` }} />
             </div>
             <span className="w-8 shrink-0 text-right text-[10px] tabular-nums text-zinc-500">
               {w.toFixed(0)}

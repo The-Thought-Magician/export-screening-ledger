@@ -174,12 +174,12 @@ export default function ListsPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search lists..."
-              className="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500 focus:outline-none"
+              className="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500 focus:outline-none"
             />
             <select
               value={typeFilter}
               onChange={(e) => setTypeFilter(e.target.value)}
-              className="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-100 focus:border-amber-500 focus:outline-none"
+              className="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-100 focus:border-lime-500 focus:outline-none"
             >
               <option value="">All types</option>
               {LIST_TYPES.map((t) => (
@@ -228,7 +228,7 @@ export default function ListsPage() {
                 {filtered.map((l) => (
                   <TR key={l.id}>
                     <TD>
-                      <Link href={`/dashboard/lists/${l.id}`} className="font-medium text-zinc-100 hover:text-amber-400">
+                      <Link href={`/dashboard/lists/${l.id}`} className="font-medium text-zinc-100 hover:text-lime-400">
                         {l.name}
                       </Link>
                     </TD>
@@ -243,7 +243,7 @@ export default function ListsPage() {
                     <TD>{fmtDate(l.created_at)}</TD>
                     <TD className="text-right">
                       <div className="flex justify-end gap-3">
-                        <Link href={`/dashboard/lists/${l.id}`} className="text-xs text-amber-400 hover:underline">
+                        <Link href={`/dashboard/lists/${l.id}`} className="text-xs text-lime-400 hover:underline">
                           Open
                         </Link>
                         <button onClick={() => removeList(l)} className="text-xs text-zinc-500 hover:text-red-400">
@@ -319,7 +319,7 @@ export default function ListsPage() {
 }
 
 const inputCls =
-  'w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500 focus:outline-none'
+  'w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500 focus:outline-none'
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (

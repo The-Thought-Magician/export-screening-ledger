@@ -52,7 +52,7 @@ function actionTone(action: string) {
 }
 
 const inputCls =
-  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500/60 focus:outline-none focus:ring-1 focus:ring-amber-500/40'
+  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500/60 focus:outline-none focus:ring-1 focus:ring-lime-500/40'
 const labelCls = 'mb-1 block text-xs font-medium uppercase tracking-wide text-zinc-500'
 
 export default function EmbargoesPage() {
@@ -354,7 +354,7 @@ export default function EmbargoesPage() {
           onClick={() => setTab('embargoes')}
           className={`-mb-px border-b-2 px-4 py-2 text-sm font-medium transition-colors ${
             tab === 'embargoes'
-              ? 'border-amber-500 text-amber-400'
+              ? 'border-lime-500 text-lime-400'
               : 'border-transparent text-zinc-500 hover:text-zinc-200'
           }`}
         >
@@ -364,7 +364,7 @@ export default function EmbargoesPage() {
           onClick={() => setTab('enduses')}
           className={`-mb-px border-b-2 px-4 py-2 text-sm font-medium transition-colors ${
             tab === 'enduses'
-              ? 'border-amber-500 text-amber-400'
+              ? 'border-lime-500 text-lime-400'
               : 'border-transparent text-zinc-500 hover:text-zinc-200'
           }`}
         >
@@ -486,7 +486,7 @@ export default function EmbargoesPage() {
                     <TR key={e.id}>
                       <TD className="font-medium text-zinc-100">{e.label}</TD>
                       <TD>
-                        <span className="font-mono text-xs text-amber-400">{e.keyword}</span>
+                        <span className="font-mono text-xs text-lime-400">{e.keyword}</span>
                       </TD>
                       <TD>
                         <Badge tone="neutral">{e.category}</Badge>
@@ -590,7 +590,7 @@ export default function EmbargoesPage() {
               type="checkbox"
               checked={embForm.is_active}
               onChange={(e) => setEmbForm({ ...embForm, is_active: e.target.checked })}
-              className="h-4 w-4 rounded border-zinc-600 bg-zinc-950 accent-amber-500"
+              className="h-4 w-4 rounded border-zinc-600 bg-zinc-950 accent-lime-500"
             />
             Active (enforced at order gate)
           </label>
@@ -682,7 +682,7 @@ export default function EmbargoesPage() {
               type="checkbox"
               checked={euForm.is_active}
               onChange={(e) => setEuForm({ ...euForm, is_active: e.target.checked })}
-              className="h-4 w-4 rounded border-zinc-600 bg-zinc-950 accent-amber-500"
+              className="h-4 w-4 rounded border-zinc-600 bg-zinc-950 accent-lime-500"
             />
             Active (enforced at order gate)
           </label>

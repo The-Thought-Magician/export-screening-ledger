@@ -284,7 +284,7 @@ export default function PartiesRegister() {
                   onClick={() => setStatus(f.value)}
                   className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition-colors ${
                     active
-                      ? 'border-amber-500/40 bg-amber-500/10 text-amber-400'
+                      ? 'border-lime-500/40 bg-lime-500/10 text-lime-400'
                       : 'border-zinc-700 bg-zinc-900 text-zinc-400 hover:text-zinc-100'
                   }`}
                 >
@@ -300,7 +300,7 @@ export default function PartiesRegister() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search name, country, identifier..."
-            className="w-full max-w-xs rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 focus:border-amber-500 focus:outline-none"
+            className="w-full max-w-xs rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 focus:border-lime-500 focus:outline-none"
           />
         </CardHeader>
         <CardBody className="p-0">
@@ -355,7 +355,7 @@ export default function PartiesRegister() {
                     <TD>
                       <Link
                         href={`/dashboard/parties/${p.id}`}
-                        className="font-medium text-zinc-100 hover:text-amber-400"
+                        className="font-medium text-zinc-100 hover:text-lime-400"
                       >
                         {p.name}
                       </Link>
@@ -462,7 +462,7 @@ export default function PartiesRegister() {
             </p>
             {importResult.errors.length > 0 && (
               <div>
-                <p className="text-amber-400">{importResult.errors.length} row(s) skipped:</p>
+                <p className="text-lime-400">{importResult.errors.length} row(s) skipped:</p>
                 <ul className="mt-1 max-h-40 list-disc overflow-auto pl-5 text-xs text-zinc-400">
                   {importResult.errors.map((er, i) => (
                     <li key={i}>{typeof er === 'string' ? er : JSON.stringify(er)}</li>
@@ -475,12 +475,12 @@ export default function PartiesRegister() {
           <div className="space-y-4">
             <p className="text-sm text-zinc-400">
               Upload a CSV with a header row. Recognized columns:{' '}
-              <code className="text-amber-400">name</code> (required),{' '}
-              <code className="text-amber-400">party_type</code>,{' '}
-              <code className="text-amber-400">country</code>,{' '}
-              <code className="text-amber-400">address</code>,{' '}
-              <code className="text-amber-400">notes</code>,{' '}
-              <code className="text-amber-400">tags</code> (semicolon-separated).
+              <code className="text-lime-400">name</code> (required),{' '}
+              <code className="text-lime-400">party_type</code>,{' '}
+              <code className="text-lime-400">country</code>,{' '}
+              <code className="text-lime-400">address</code>,{' '}
+              <code className="text-lime-400">notes</code>,{' '}
+              <code className="text-lime-400">tags</code> (semicolon-separated).
             </p>
             <input
               ref={fileRef}
@@ -490,7 +490,7 @@ export default function PartiesRegister() {
                 const f = e.target.files?.[0]
                 if (f) void onFile(f)
               }}
-              className="block w-full text-sm text-zinc-400 file:mr-3 file:rounded-lg file:border-0 file:bg-amber-500 file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-zinc-950 hover:file:bg-amber-400"
+              className="block w-full text-sm text-zinc-400 file:mr-3 file:rounded-lg file:border-0 file:bg-lime-500 file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-zinc-950 hover:file:bg-lime-400"
             />
             {importPreview && (
               <div>
@@ -522,7 +522,7 @@ export default function PartiesRegister() {
                   </table>
                 </div>
                 {importPreview.rows.length > 0 && !importPreview.headers.includes('name') && (
-                  <p className="mt-2 text-xs text-amber-400">
+                  <p className="mt-2 text-xs text-lime-400">
                     No "name" column detected — rows may be rejected.
                   </p>
                 )}

@@ -32,9 +32,9 @@ export default function SignUp() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2 text-2xl font-black">
-            <span className="inline-block h-7 w-7 rounded bg-amber-500" />
+            <span className="inline-block h-7 w-7 rounded bg-lime-500" />
             <span className="text-zinc-100">
-              ExportScreening<span className="text-amber-400">Ledger</span>
+              ExportScreening<span className="text-lime-400">Ledger</span>
             </span>
           </Link>
           <h1 className="text-xl font-bold mt-5 text-zinc-100">Create your account</h1>
@@ -49,7 +49,7 @@ export default function SignUp() {
               name="name"
               type="text"
               required
-              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:border-amber-500"
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:border-lime-500"
               placeholder="Your name"
             />
           </div>
@@ -59,7 +59,7 @@ export default function SignUp() {
               name="email"
               type="email"
               required
-              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:border-amber-500"
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:border-lime-500"
               placeholder="officer@exporter.com"
             />
           </div>
@@ -70,19 +70,19 @@ export default function SignUp() {
               type="password"
               required
               minLength={8}
-              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:border-amber-500"
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-zinc-100 focus:outline-none focus:border-lime-500"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-amber-500 hover:bg-amber-400 disabled:opacity-50 text-zinc-950 py-3 rounded-lg font-semibold transition-colors"
+            className="w-full bg-lime-500 hover:bg-lime-400 disabled:opacity-50 text-zinc-950 py-3 rounded-lg font-semibold transition-colors"
           >
             {loading ? 'Creating account...' : 'Create Account'}
           </button>
           <p className="text-center text-zinc-400 text-sm">
             Already have an account?{' '}
-            <Link href="/auth/sign-in" className="text-amber-400 hover:text-amber-300">
+            <Link href="/auth/sign-in" className="text-lime-400 hover:text-lime-300">
               Sign in
             </Link>
           </p>

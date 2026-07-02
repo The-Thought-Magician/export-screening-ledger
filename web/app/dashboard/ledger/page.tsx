@@ -31,7 +31,7 @@ interface VerifyResult {
 }
 
 const inputCls =
-  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500/60 focus:outline-none focus:ring-1 focus:ring-amber-500/40'
+  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500/60 focus:outline-none focus:ring-1 focus:ring-lime-500/40'
 const labelCls = 'mb-1 block text-xs font-medium uppercase tracking-wide text-zinc-500'
 
 function eventTone(ev: string) {
@@ -354,7 +354,7 @@ export default function LedgerPage() {
                       <div className="font-mono text-[11px] text-zinc-600">{shortHash(e.entity_id)}</div>
                     </TD>
                     <TD className="font-mono text-xs text-zinc-400">{e.actor_id ? shortHash(e.actor_id) : 'system'}</TD>
-                    <TD className="font-mono text-[11px] text-amber-400/80">{shortHash(e.hash)}</TD>
+                    <TD className="font-mono text-[11px] text-lime-400/80">{shortHash(e.hash)}</TD>
                     <TD className="whitespace-nowrap text-xs text-zinc-500">{fmtTime(e.created_at)}</TD>
                     <TD className="text-right">
                       <Button
@@ -416,7 +416,7 @@ export default function LedgerPage() {
                 </div>
                 <div>
                   <span className="text-zinc-600">hash: </span>
-                  <span className="break-all text-amber-400">{detail.hash}</span>
+                  <span className="break-all text-lime-400">{detail.hash}</span>
                 </div>
               </div>
             </div>

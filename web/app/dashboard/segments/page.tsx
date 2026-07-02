@@ -377,7 +377,7 @@ export default function SegmentsPage() {
               value={form.name}
               onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
               placeholder="e.g. High-risk distributors"
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             />
           </div>
 
@@ -387,7 +387,7 @@ export default function SegmentsPage() {
               <select
                 value={form.status}
                 onChange={(e) => setForm((f) => ({ ...f, status: e.target.value }))}
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
               >
                 <option value="">Any status</option>
                 {PARTY_STATUSES.map((s) => (
@@ -404,7 +404,7 @@ export default function SegmentsPage() {
                 value={form.country}
                 onChange={(e) => setForm((f) => ({ ...f, country: e.target.value }))}
                 placeholder="Any country"
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
               />
               <datalist id="segment-countries">
                 {facets.countries.map((c) => (
@@ -419,7 +419,7 @@ export default function SegmentsPage() {
                 value={form.party_type}
                 onChange={(e) => setForm((f) => ({ ...f, party_type: e.target.value }))}
                 placeholder="Any type"
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
               />
               <datalist id="segment-types">
                 {facets.types.map((t) => (
@@ -434,7 +434,7 @@ export default function SegmentsPage() {
                 value={form.tag}
                 onChange={(e) => setForm((f) => ({ ...f, tag: e.target.value }))}
                 placeholder="Any tag"
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
               />
               <datalist id="segment-tags">
                 {facets.tags.map((t) => (
@@ -450,14 +450,14 @@ export default function SegmentsPage() {
               value={form.q}
               onChange={(e) => setForm((f) => ({ ...f, q: e.target.value }))}
               placeholder="Search term"
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             />
           </div>
 
           <div className="rounded-lg border border-zinc-800 bg-zinc-950/40 px-4 py-3">
             <div className="flex items-center justify-between text-sm">
               <span className="text-zinc-400">Live preview</span>
-              <span className="tabular-nums font-medium text-amber-400">{previewCount} parties</span>
+              <span className="tabular-nums font-medium text-lime-400">{previewCount} parties</span>
             </div>
             <p className="mt-1 text-xs text-zinc-500">{describeFilters(formFilters)}</p>
           </div>

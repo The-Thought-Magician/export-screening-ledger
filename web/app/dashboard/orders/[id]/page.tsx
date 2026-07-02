@@ -167,7 +167,7 @@ export default function OrderDetailPage() {
   if (error && !order) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/orders" className="text-sm text-amber-400 hover:text-amber-300">← Back to orders</Link>
+        <Link href="/dashboard/orders" className="text-sm text-lime-400 hover:text-lime-300">← Back to orders</Link>
         <div className="rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">{error}</div>
       </div>
     )
@@ -185,7 +185,7 @@ export default function OrderDetailPage() {
     <div className="space-y-6">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <Link href="/dashboard/orders" className="text-sm text-amber-400 hover:text-amber-300">← Back to orders</Link>
+          <Link href="/dashboard/orders" className="text-sm text-lime-400 hover:text-lime-300">← Back to orders</Link>
           <div className="mt-2 flex items-center gap-3">
             <h1 className="text-xl font-semibold text-zinc-100">{order.reference}</h1>
             <Badge tone={statusTone(order.gate_status)}>{gateLabel(order.gate_status)}</Badge>
@@ -220,12 +220,12 @@ export default function OrderDetailPage() {
       </div>
 
       {order.gate_status === 'overridden' && (
-        <Card className="border-amber-500/40">
+        <Card className="border-lime-500/40">
           <CardBody>
             <div className="flex items-start gap-3">
               <span className="text-lg">⚠️</span>
               <div>
-                <div className="text-sm font-semibold text-amber-400">Gate overridden</div>
+                <div className="text-sm font-semibold text-lime-400">Gate overridden</div>
                 <p className="mt-1 text-sm text-zinc-300">{order.override_reason || 'No justification recorded'}</p>
                 <p className="mt-1 text-xs text-zinc-500">
                   By {order.override_by || 'unknown'} · {fmtDateTime(order.overridden_at)}
@@ -320,7 +320,7 @@ export default function OrderDetailPage() {
                 {parties.map((p, i) => (
                   <TR key={p.id ?? p.party_id ?? i}>
                     <TD>
-                      <Link href={`/dashboard/parties/${p.party_id}`} className="font-medium text-zinc-100 hover:text-amber-400">
+                      <Link href={`/dashboard/parties/${p.party_id}`} className="font-medium text-zinc-100 hover:text-lime-400">
                         {p.name || p.party_id}
                       </Link>
                     </TD>
@@ -355,7 +355,7 @@ export default function OrderDetailPage() {
             <input
               value={editForm.reference}
               onChange={(e) => setEditForm((f) => ({ ...f, reference: e.target.value }))}
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -364,7 +364,7 @@ export default function OrderDetailPage() {
               <input
                 value={editForm.destination_country}
                 onChange={(e) => setEditForm((f) => ({ ...f, destination_country: e.target.value }))}
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
               />
             </div>
             <div>
@@ -375,7 +375,7 @@ export default function OrderDetailPage() {
                 step="0.01"
                 value={editForm.value}
                 onChange={(e) => setEditForm((f) => ({ ...f, value: e.target.value }))}
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
               />
             </div>
           </div>
@@ -384,7 +384,7 @@ export default function OrderDetailPage() {
             <input
               value={editForm.end_use}
               onChange={(e) => setEditForm((f) => ({ ...f, end_use: e.target.value }))}
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             />
           </div>
           <p className="text-xs text-zinc-600">Saving re-evaluates the compliance gate against the updated details.</p>
@@ -408,7 +408,7 @@ export default function OrderDetailPage() {
           {overrideError && (
             <div className="rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm text-red-300">{overrideError}</div>
           )}
-          <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-sm text-amber-300">
+          <div className="rounded-lg border border-lime-500/30 bg-lime-500/10 px-3 py-2 text-sm text-lime-300">
             Overriding releases a gated order despite outstanding block reasons. The justification is written to the immutable
             audit ledger and attributed to you.
           </div>
@@ -429,7 +429,7 @@ export default function OrderDetailPage() {
               onChange={(e) => setOverrideReason(e.target.value)}
               rows={4}
               placeholder="Document the compliance rationale for releasing this order..."
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-lime-500 focus:outline-none"
             />
           </div>
         </div>

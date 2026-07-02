@@ -262,7 +262,7 @@ export default function ListVersionDetailPage() {
   if (error && !version) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/lists" className="text-sm text-amber-400 hover:text-amber-300">
+        <Link href="/dashboard/lists" className="text-sm text-lime-400 hover:text-lime-300">
           ← Back to lists
         </Link>
         <EmptyState
@@ -282,14 +282,14 @@ export default function ListVersionDetailPage() {
     <div className="space-y-6">
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-2 text-sm text-zinc-500">
-          <Link href="/dashboard/lists" className="text-amber-400 hover:text-amber-300">
+          <Link href="/dashboard/lists" className="text-lime-400 hover:text-lime-300">
             Lists
           </Link>
           <span>/</span>
           {version?.list_id ? (
             <Link
               href={`/dashboard/lists/${version.list_id}`}
-              className="text-amber-400 hover:text-amber-300"
+              className="text-lime-400 hover:text-lime-300"
             >
               List
             </Link>
@@ -373,7 +373,7 @@ export default function ListVersionDetailPage() {
                 <div className="w-32 shrink-0 truncate text-xs text-zinc-400">{type}</div>
                 <div className="h-3 flex-1 overflow-hidden rounded bg-zinc-800">
                   <div
-                    className="h-full rounded bg-amber-500"
+                    className="h-full rounded bg-lime-500"
                     style={{ width: `${maxTypeCount ? (count / maxTypeCount) * 100 : 0}%` }}
                   />
                 </div>
@@ -394,7 +394,7 @@ export default function ListVersionDetailPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search entries..."
-            className="w-full max-w-xs rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 focus:border-amber-500/60 focus:outline-none"
+            className="w-full max-w-xs rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 focus:border-lime-500/60 focus:outline-none"
           />
         </CardHeader>
         <CardBody className="p-0">
@@ -628,8 +628,8 @@ export default function ListVersionDetailPage() {
                 <div className="text-lg font-semibold text-red-400">{asArray(diff.removed).length}</div>
                 <div className="text-xs text-zinc-500">Removed</div>
               </div>
-              <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 py-2">
-                <div className="text-lg font-semibold text-amber-400">{asArray(diff.changed).length}</div>
+              <div className="rounded-lg border border-lime-500/30 bg-lime-500/10 py-2">
+                <div className="text-lg font-semibold text-lime-400">{asArray(diff.changed).length}</div>
                 <div className="text-xs text-zinc-500">Changed</div>
               </div>
             </div>
@@ -682,7 +682,7 @@ function Field({
     <label className="block">
       <span className="mb-1 block text-xs font-medium text-zinc-400">
         {label}
-        {required && <span className="text-amber-400"> *</span>}
+        {required && <span className="text-lime-400"> *</span>}
       </span>
       {children}
     </label>

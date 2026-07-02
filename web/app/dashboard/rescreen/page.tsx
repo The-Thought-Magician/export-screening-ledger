@@ -234,7 +234,7 @@ export default function RescreenPage() {
             onClick={() => setTab(key)}
             className={`px-4 py-2 text-sm font-medium transition-colors ${
               tab === key
-                ? 'border-b-2 border-amber-500 text-amber-400'
+                ? 'border-b-2 border-lime-500 text-lime-400'
                 : 'text-zinc-500 hover:text-zinc-200'
             }`}
           >
@@ -251,7 +251,7 @@ export default function RescreenPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search party or country..."
-              className="w-56 rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-amber-500 focus:outline-none"
+              className="w-56 rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm text-zinc-200 placeholder:text-zinc-600 focus:border-lime-500 focus:outline-none"
             />
           </CardHeader>
           <CardBody className="p-0">
@@ -286,7 +286,7 @@ export default function RescreenPage() {
                     return (
                       <TR key={p.id}>
                         <TD>
-                          <Link href={`/dashboard/parties/${p.id}`} className="font-medium text-zinc-100 hover:text-amber-400">
+                          <Link href={`/dashboard/parties/${p.id}`} className="font-medium text-zinc-100 hover:text-lime-400">
                             {p.name}
                           </Link>
                           {p.party_type && <div className="text-xs text-zinc-600">{p.party_type}</div>}
@@ -361,7 +361,7 @@ export default function RescreenPage() {
                     <TR key={s.id}>
                       <TD>
                         {s.party_id ? (
-                          <Link href={`/dashboard/parties/${s.party_id}`} className="text-zinc-100 hover:text-amber-400">
+                          <Link href={`/dashboard/parties/${s.party_id}`} className="text-zinc-100 hover:text-lime-400">
                             Per-party
                           </Link>
                         ) : (
@@ -421,7 +421,7 @@ export default function RescreenPage() {
             <select
               value={form.cadence}
               onChange={(e) => setForm((f) => ({ ...f, cadence: e.target.value }))}
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             >
               {CADENCES.map((c) => (
                 <option key={c} value={c} className="capitalize">{c}</option>
@@ -434,7 +434,7 @@ export default function RescreenPage() {
               type="date"
               value={form.next_due_at}
               onChange={(e) => setForm((f) => ({ ...f, next_due_at: e.target.value }))}
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-amber-500 focus:outline-none"
+              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-200 focus:border-lime-500 focus:outline-none"
             />
           </div>
           <div className="space-y-2">
@@ -443,7 +443,7 @@ export default function RescreenPage() {
                 type="checkbox"
                 checked={form.on_change}
                 onChange={(e) => setForm((f) => ({ ...f, on_change: e.target.checked }))}
-                className="h-4 w-4 accent-amber-500"
+                className="h-4 w-4 accent-lime-500"
               />
               Re-screen when party details change
             </label>
@@ -452,7 +452,7 @@ export default function RescreenPage() {
                 type="checkbox"
                 checked={form.on_new_version}
                 onChange={(e) => setForm((f) => ({ ...f, on_new_version: e.target.checked }))}
-                className="h-4 w-4 accent-amber-500"
+                className="h-4 w-4 accent-lime-500"
               />
               Re-screen when a list publishes a new version
             </label>

@@ -32,7 +32,7 @@ const SCOPES = [
 ]
 
 const inputCls =
-  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500/60 focus:outline-none focus:ring-1 focus:ring-amber-500/40'
+  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500/60 focus:outline-none focus:ring-1 focus:ring-lime-500/40'
 const labelCls = 'mb-1 block text-xs font-medium uppercase tracking-wide text-zinc-500'
 
 function fmtDate(d?: string) {
@@ -249,7 +249,7 @@ export default function ExportsPage() {
                   </div>
                   <div className="h-3 flex-1 overflow-hidden rounded-full bg-zinc-800">
                     <div
-                      className="h-full rounded-full bg-amber-500"
+                      className="h-full rounded-full bg-lime-500"
                       style={{ width: `${(count / maxScope) * 100}%` }}
                     />
                   </div>
@@ -367,7 +367,7 @@ export default function ExportsPage() {
                   key={s.value}
                   className={`flex cursor-pointer items-start gap-3 rounded-lg border px-3 py-2.5 transition-colors ${
                     genScope === s.value
-                      ? 'border-amber-500/60 bg-amber-500/10'
+                      ? 'border-lime-500/60 bg-lime-500/10'
                       : 'border-zinc-800 bg-zinc-950 hover:border-zinc-700'
                   }`}
                 >
@@ -377,7 +377,7 @@ export default function ExportsPage() {
                     value={s.value}
                     checked={genScope === s.value}
                     onChange={() => setGenScope(s.value)}
-                    className="mt-1 h-4 w-4 accent-amber-500"
+                    className="mt-1 h-4 w-4 accent-lime-500"
                   />
                   <span>
                     <span className="block text-sm font-medium text-zinc-100">{s.label}</span>
@@ -442,7 +442,7 @@ export default function ExportsPage() {
               </div>
               <div className="col-span-2">
                 <div className={labelCls}>Manifest Hash</div>
-                <code className="block break-all rounded-md border border-zinc-800 bg-zinc-950 px-2 py-1.5 font-mono text-xs text-amber-400">
+                <code className="block break-all rounded-md border border-zinc-800 bg-zinc-950 px-2 py-1.5 font-mono text-xs text-lime-400">
                   {detail.manifest_hash || '—'}
                 </code>
               </div>

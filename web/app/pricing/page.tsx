@@ -43,8 +43,8 @@ export default function Pricing() {
     <main className="min-h-screen bg-zinc-950 text-zinc-100">
       <nav className="border-b border-zinc-800 px-6 py-4 flex items-center justify-between">
         <Link href="/" className="inline-flex items-center gap-2 text-lg font-bold">
-          <span className="inline-block h-6 w-6 rounded bg-amber-500" />
-          ExportScreening<span className="text-amber-400">Ledger</span>
+          <span className="inline-block h-6 w-6 rounded bg-lime-500" />
+          ExportScreening<span className="text-lime-400">Ledger</span>
         </Link>
         <div className="flex items-center gap-4">
           <Link href="/auth/sign-in" className="text-sm text-zinc-300 hover:text-zinc-100">
@@ -52,7 +52,7 @@ export default function Pricing() {
           </Link>
           <Link
             href="/auth/sign-up"
-            className="rounded-lg bg-amber-500 px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-amber-400"
+            className="rounded-lg bg-lime-500 px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-lime-400"
           >
             Get Started
           </Link>
@@ -65,10 +65,10 @@ export default function Pricing() {
           Every feature is free while ExportScreeningLedger is in early access. No card required.
         </p>
 
-        <div className="mx-auto mt-12 max-w-md rounded-2xl border border-amber-500/30 bg-zinc-900 p-8 text-left">
+        <div className="mx-auto mt-12 max-w-md rounded-2xl border border-lime-500/30 bg-zinc-900 p-8 text-left">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-bold">Free</h2>
-            <span className="rounded-md border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-400">
+            <span className="rounded-md border border-lime-500/30 bg-lime-500/10 px-2 py-0.5 text-xs font-medium text-lime-400">
               All features
             </span>
           </div>
@@ -83,7 +83,7 @@ export default function Pricing() {
           <ul className="mt-6 space-y-2">
             {included.map((item) => (
               <li key={item} className="flex items-start gap-2 text-sm text-zinc-300">
-                <span className="mt-0.5 text-amber-400">✓</span>
+                <span className="mt-0.5 text-lime-400">✓</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -91,7 +91,7 @@ export default function Pricing() {
 
           <Link
             href="/auth/sign-up"
-            className="mt-8 block rounded-lg bg-amber-500 py-3 text-center text-sm font-semibold text-zinc-950 hover:bg-amber-400"
+            className="mt-8 block rounded-lg bg-lime-500 py-3 text-center text-sm font-semibold text-zinc-950 hover:bg-lime-400"
           >
             Start free
           </Link>

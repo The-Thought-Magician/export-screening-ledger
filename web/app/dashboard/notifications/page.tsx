@@ -63,7 +63,7 @@ function kindIcon(kind: string) {
 }
 
 const inputCls =
-  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-amber-500/60 focus:outline-none focus:ring-1 focus:ring-amber-500/40'
+  'w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-600 focus:border-lime-500/60 focus:outline-none focus:ring-1 focus:ring-lime-500/40'
 
 export default function NotificationsPage() {
   const [workspaceId, setWorkspaceId] = useState<string | null>(null)
@@ -261,7 +261,7 @@ export default function NotificationsPage() {
                     </span>
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-center gap-2">
-                        {!n.is_read && <span className="h-2 w-2 shrink-0 rounded-full bg-amber-500" aria-label="unread" />}
+                        {!n.is_read && <span className="h-2 w-2 shrink-0 rounded-full bg-lime-500" aria-label="unread" />}
                         <span className={`text-sm ${n.is_read ? 'text-zinc-300' : 'font-semibold text-zinc-100'}`}>
                           {n.title}
                         </span>
@@ -271,7 +271,7 @@ export default function NotificationsPage() {
                       <div className="mt-1.5 flex items-center gap-3 text-xs text-zinc-600">
                         <span title={fmtDate(n.created_at)}>{relative(n.created_at)}</span>
                         {n.link && (
-                          <a href={n.link} className="text-amber-400 hover:text-amber-300">
+                          <a href={n.link} className="text-lime-400 hover:text-lime-300">
                             Open →
                           </a>
                         )}
